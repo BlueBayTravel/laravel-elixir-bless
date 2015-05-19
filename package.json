@@ -26,7 +26,7 @@
    },
    "homepage":"https://github.com/BlueBayTravel/laravel-elixir-bless",
    "dependencies":{
-      "gulp-bless":"^1.8.6",
-      "gulp-notify":"^3.0.1"
+      "gulp-bless":"^3.0.1",
+      "gulp-notify":"^2.0.0"
    }
 }
