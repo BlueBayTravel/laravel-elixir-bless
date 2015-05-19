@@ -1,32 +1,38 @@
 {
-   "name":"laravel-elixir-bless",
-   "version":"0.1.0",
-   "description":"Laravel Elixir Bless Extension",
-   "main":"index.js",
-   "scripts":{
-      "test":"echo \"Error: no test specified\" && exit 1"
-   },
-   "repository":{
-      "type":"git",
-      "url":"https://github.com/BlueBayTravel/laravel-elixir-bless.git"
-   },
-   "keywords":[
-      "laravel",
-      "elixir",
-      "bless",
-      "gulp"
-   ],
-   "author":{
-      "name":"James Brooks",
-      "email":"james@bluebaytravel.co.uk"
-   },
-   "license":"MIT",
-   "bugs":{
-      "url":"https://github.com/BlueBayTravel/laravel-elixir-bless/issues"
-   },
-   "homepage":"https://github.com/BlueBayTravel/laravel-elixir-bless",
-   "dependencies":{
-      "gulp-bless":"^3.0.1",
-      "gulp-notify":"^2.0.0"
-   }
+  "name": "laravel-elixir-bless",
+  "version": "0.1.0",
+  "description": "Laravel Elixir Bless Extension",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BlueBayTravel/laravel-elixir-bless.git"
+  },
+  "keywords": [
+    "laravel",
+    "elixir",
+    "bless",
+    "gulp"
+  ],
+  "author": {
+    "name": "James Brooks",
+    "email": "james@bluebaytravel.co.uk"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BlueBayTravel/laravel-elixir-bless/issues"
+  },
+  "homepage": "https://github.com/BlueBayTravel/laravel-elixir-bless",
+  "dependencies": {
+    "gulp-bless": "^3.0.1",
+    "gulp-notify": "^2.0.0"
+  },
+  "readme": "# laravel-elixir-bless\n\n## Install\n\n```bash\n$ npm install laravel-elixir-bless --save-dev\n```\n\n## Usage\n\n### Example `gulpfile.js`\n\n```js\nvar elixir = require('laravel-elixir');\nrequire('laravel-elixir-bless');\n\nelixir(function(mix) {\n    mix.bless();\n});\n```\n\n### Advanced Example\n\n```js\nvar elixir = require('laravel-elixir');\nrequire('laravel-elixir-bless');\n\nelixir(function(mix) {\n    mix.bless('app.css', {\n        imports: false\n    });\n});\n```\n\n# License\n\n[MIT](/LICENSE)\n",
+  "readmeFilename": "README.md",
+  "gitHead": "b4a01ae671380245a5199327eafdc2bdc0ab4e28",
+  "_id": "laravel-elixir-bless@0.1.0",
+  "_shasum": "0886179523976429bbb72840d6af7819f78b0014",
+  "_from": "laravel-elixir-bless@>=0.1.0 <0.2.0"
 }
