@@ -1,0 +1,32 @@
+{
+   "name":"laravel-elixir-bless",
+   "version":"0.1.0",
+   "description":"Laravel Elixir Bless Extension",
+   "main":"index.js",
+   "scripts":{
+      "test":"echo \"Error: no test specified\" && exit 1"
+   },
+   "repository":{
+      "type":"git",
+      "url":"https://github.com/BlueBayTravel/laravel-elixir-bless.git"
+   },
+   "keywords":[
+      "laravel",
+      "elixir",
+      "bless",
+      "gulp"
+   ],
+   "author":{
+      "name":"James Brooks",
+      "email":"james@bluebaytravel.co.uk"
+   },
+   "license":"MIT",
+   "bugs":{
+      "url":"https://github.com/BlueBayTravel/laravel-elixir-bless/issues"
+   },
+   "homepage":"https://github.com/BlueBayTravel/laravel-elixir-bless",
+   "dependencies":{
+      "gulp-bless":"^1.8.6",
+      "gulp-notify":"^3.0.1"
+   }
+}
