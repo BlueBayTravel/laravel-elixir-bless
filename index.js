@@ -4,10 +4,18 @@ var notify = require('gulp-notify');
 var elixir = require('laravel-elixir');
 var path = require('path');
 
-elixir.extend('bless', function(src, options) {
-    src = src || 'public/css/**/*.css';
+elixir.extend('bless', function(src, outputDir, options) {
+    src = src || './public/css/**/*.css';
 
-    options = options || {};
+    if (typeof outputDir == 'object') {
+        options = outputDir;
+        outputDir = './public/blessed';
+    }  else if (outputDir == undefined) {
+        outputDir = './public/blessed';
+        options = {};
+    } else {
+        options = options || {};
+    }
 
     var onError = function(err) {
         notify.onError({
@@ -23,6 +31,7 @@ elixir.extend('bless', function(src, options) {
     gulp.task('bless', function() {
         return gulp.src(src)
                    .pipe(bless(options))
+                   .pipe(gulp.dest(outputDir))
                    .on('error', onError)
                    .pipe(notify({
                         title: 'Laravel Bless',
