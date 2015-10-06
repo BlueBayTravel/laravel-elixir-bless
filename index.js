@@ -1,10 +1,12 @@
 var gulp = require('gulp');
 var bless = require('gulp-bless');
 var notify = require('gulp-notify');
-var elixir = require('laravel-elixir');
 var path = require('path');
+var Elixir = require('laravel-elixir');
 
-elixir.extend('bless', function(src, outputDir, options) {
+var Task = Elixir.Task;
+
+Elixir.extend('bless', function(src, outputDir, options) {
     src = src || './public/css/**/*.css';
 
     if (typeof outputDir == 'object') {
@@ -28,7 +30,7 @@ elixir.extend('bless', function(src, outputDir, options) {
         this.emit('end');
     };
 
-    gulp.task('bless', function() {
+    new Task('bless', function() {
         return gulp.src(src)
                    .pipe(bless(options))
                    .pipe(gulp.dest(outputDir))
@@ -39,9 +41,6 @@ elixir.extend('bless', function(src, outputDir, options) {
                         icon: path.join(__dirname, '../laravel-elixir/icons/pass.png'),
                         onLast: true
                    }));
-    });
-
-    this.registerWatcher('bless', src);
-
-    return this.queueTask('bless');
+    })
+    .watch('./app/**');
 });
