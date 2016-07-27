@@ -27,7 +27,8 @@ require('laravel-elixir-bless');
 
 elixir(function(mix) {
     mix.bless('app.css', {
-        imports: false
+        imports: false,
+        watch: './resources/less/*.less'
     });
 });
 ```

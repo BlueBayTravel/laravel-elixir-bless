@@ -42,5 +42,5 @@ Elixir.extend('bless', function(src, outputDir, options) {
                         onLast: true
                    }));
     })
-    .watch('./app/**');
+    .watch(options.watch || './app/**');
 });
