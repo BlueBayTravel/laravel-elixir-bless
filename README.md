@@ -27,12 +27,11 @@ require('laravel-elixir-bless');
 
 elixir(function(mix) {
     mix.bless('app.css', {
-        imports: false,
-        watch: './resources/less/*.less'
+        imports: false, // Denotes if importing CSS files via @import
+        watch: './public/css/app.css' // Optional file or pattern to watch (e.g. 'public/css/**.css')
     });
 });
 ```
-
 # License
 
 [MIT](/LICENSE)
